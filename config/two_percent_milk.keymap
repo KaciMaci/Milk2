@@ -20,8 +20,8 @@
         label = "default_kscan";
 
        input-gpios = 
-          <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>, 
-          <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
+          <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, 
+          <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
      };
    };
 

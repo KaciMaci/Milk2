@@ -35,9 +35,25 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+
+td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C_VOL_DN>, <&kp C_PP>, <&tog layer_1>;
+        };
+
+td0: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp K_PWR>, <&bt BT_CLR>, <&tog layer_0>;
         };
       };
     };
@@ -49,8 +65,16 @@
         layer_0 {
             bindings = <
                 &mt C_VOL_UP C_NEXT
-                &mt C_VOL_DN C_PP
+                &td0
             >;
         };
+
+        layer_1 {
+            bindings = <
+                &td1
+                &bootloader
+            >;
+        };
+
     };
 };

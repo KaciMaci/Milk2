@@ -32,8 +32,8 @@
 
         default_layer {
             bindings = <
-                &bt BT_CLR
-                &bt BT_CLR
+                &kp C_PP
+                &kp C_NEXT
             >;
         };
     };

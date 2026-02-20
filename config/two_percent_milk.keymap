@@ -55,8 +55,8 @@
 
         layer_0 {
             bindings = <
-                &mt C_VOL_UP C_NEXT
-                &mt C_VOL_DN C_PP
+                &kp Z
+                &kp X
             >;
         };
 

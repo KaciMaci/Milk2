@@ -3,7 +3,6 @@
         zmk,kscan = &kscan0;
     };
 
-    // Creamos el nodo desde cero ignorando pro_micro
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-direct";
         label = "KSCAN";
@@ -12,11 +11,4 @@
             , <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
-};
-
-/* * Si el archivo original del shield define un nodo llamado /kscan 
- * que usa 'pro_micro', esto intentará deshabilitarlo para que no de error.
- */
-/ {
-    /delete-node/ kscan;
 };

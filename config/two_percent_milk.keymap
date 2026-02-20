@@ -3,21 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    chosen {
-        zmk,kscan = &default_kscan;
-    };
-
-    // Usamos los nombres de GPIO directos del microcontrolador
-    default_kscan: kscan {
-        compatible = "zmk,kscan-gpio-direct";
-        label = "default_kscan";
-        input-gpios = 
-            <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // Corresponde a D7
-            <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Corresponde a D4
-    };
-
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
                 &kp Z
